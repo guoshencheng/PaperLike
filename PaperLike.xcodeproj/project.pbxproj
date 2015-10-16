@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		2E5DFE921BD0822200C7470E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFE911BD0822200C7470E /* main.m */; };
 		2E5DFE951BD0822200C7470E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFE941BD0822200C7470E /* AppDelegate.m */; };
-		2E5DFE981BD0822200C7470E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFE971BD0822200C7470E /* ViewController.m */; };
-		2E5DFE9B1BD0822200C7470E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFE991BD0822200C7470E /* Main.storyboard */; };
 		2E5DFE9D1BD0822200C7470E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFE9C1BD0822200C7470E /* Assets.xcassets */; };
-		2E5DFEA01BD0822200C7470E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFE9E1BD0822200C7470E /* LaunchScreen.storyboard */; };
+		2E5DFEAA1BD082F500C7470E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFEA91BD082F500C7470E /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEB01BD08D5B00C7470E /* SlideMotion+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEAD1BD08D5B00C7470E /* SlideMotion+Calculation.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEB11BD08D5B00C7470E /* SlideMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEAF1BD08D5B00C7470E /* SlideMotion.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEBC1BD08E1000C7470E /* CustomSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEBA1BD08E1000C7470E /* CustomSelectViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEBD1BD08E1000C7470E /* CustomSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFEBB1BD08E1000C7470E /* CustomSelectViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEC11BD08F1800C7470E /* UIScreen+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEC01BD08F1800C7470E /* UIScreen+Utility.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEC51BD098EA00C7470E /* CustomSelectionListDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEC41BD098EA00C7470E /* CustomSelectionListDatasource.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFED01BD09A2200C7470E /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFECE1BD09A2200C7470E /* SelectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFED11BD09A2200C7470E /* SelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFECF1BD09A2200C7470E /* SelectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2E5DFED41BD09A8F00C7470E /* CustomSelectViewController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFED71BD0A02100C7470E /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFED61BD0A02100C7470E /* CircleLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +28,27 @@
 		2E5DFE911BD0822200C7470E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E5DFE931BD0822200C7470E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E5DFE941BD0822200C7470E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E5DFE961BD0822200C7470E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E5DFE971BD0822200C7470E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2E5DFE9A1BD0822200C7470E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E5DFE9C1BD0822200C7470E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E5DFE9F1BD0822200C7470E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E5DFEA11BD0822200C7470E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5DFEA91BD082F500C7470E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		2E5DFEAC1BD08D5B00C7470E /* SlideMotion+Calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SlideMotion+Calculation.h"; sourceTree = "<group>"; };
+		2E5DFEAD1BD08D5B00C7470E /* SlideMotion+Calculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SlideMotion+Calculation.m"; sourceTree = "<group>"; };
+		2E5DFEAE1BD08D5B00C7470E /* SlideMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMotion.h; sourceTree = "<group>"; };
+		2E5DFEAF1BD08D5B00C7470E /* SlideMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMotion.m; sourceTree = "<group>"; };
+		2E5DFEB91BD08E1000C7470E /* CustomSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSelectViewController.h; sourceTree = "<group>"; };
+		2E5DFEBA1BD08E1000C7470E /* CustomSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSelectViewController.m; sourceTree = "<group>"; };
+		2E5DFEBB1BD08E1000C7470E /* CustomSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSelectViewController.xib; sourceTree = "<group>"; };
+		2E5DFEBF1BD08F1800C7470E /* UIScreen+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Utility.h"; sourceTree = "<group>"; };
+		2E5DFEC01BD08F1800C7470E /* UIScreen+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Utility.m"; sourceTree = "<group>"; };
+		2E5DFEC31BD098EA00C7470E /* CustomSelectionListDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSelectionListDatasource.h; sourceTree = "<group>"; };
+		2E5DFEC41BD098EA00C7470E /* CustomSelectionListDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSelectionListDatasource.m; sourceTree = "<group>"; };
+		2E5DFECD1BD09A2200C7470E /* SelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionCell.h; sourceTree = "<group>"; };
+		2E5DFECE1BD09A2200C7470E /* SelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionCell.m; sourceTree = "<group>"; };
+		2E5DFECF1BD09A2200C7470E /* SelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionCell.xib; sourceTree = "<group>"; };
+		2E5DFED21BD09A8F00C7470E /* CustomSelectViewController+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomSelectViewController+Configuration.h"; sourceTree = "<group>"; };
+		2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomSelectViewController+Configuration.m"; sourceTree = "<group>"; };
+		2E5DFED51BD0A02100C7470E /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
+		2E5DFED61BD0A02100C7470E /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +81,15 @@
 		2E5DFE8F1BD0822200C7470E /* PaperLike */ = {
 			isa = PBXGroup;
 			children = (
+				2E5DFECC1BD09A2200C7470E /* SelectionCell */,
+				2E5DFEC21BD098A600C7470E /* Datasource */,
+				2E5DFEBE1BD08F0800C7470E /* Tools */,
+				2E5DFEB81BD08E1000C7470E /* CustomSelectViewController */,
+				2E5DFEAB1BD08D5B00C7470E /* Slide Motion */,
 				2E5DFE931BD0822200C7470E /* AppDelegate.h */,
 				2E5DFE941BD0822200C7470E /* AppDelegate.m */,
-				2E5DFE961BD0822200C7470E /* ViewController.h */,
-				2E5DFE971BD0822200C7470E /* ViewController.m */,
-				2E5DFE991BD0822200C7470E /* Main.storyboard */,
+				2E5DFEA91BD082F500C7470E /* LaunchScreen.xib */,
 				2E5DFE9C1BD0822200C7470E /* Assets.xcassets */,
-				2E5DFE9E1BD0822200C7470E /* LaunchScreen.storyboard */,
 				2E5DFEA11BD0822200C7470E /* Info.plist */,
 				2E5DFE901BD0822200C7470E /* Supporting Files */,
 			);
@@ -77,6 +102,59 @@
 				2E5DFE911BD0822200C7470E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E5DFEAB1BD08D5B00C7470E /* Slide Motion */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFEAC1BD08D5B00C7470E /* SlideMotion+Calculation.h */,
+				2E5DFEAD1BD08D5B00C7470E /* SlideMotion+Calculation.m */,
+				2E5DFEAE1BD08D5B00C7470E /* SlideMotion.h */,
+				2E5DFEAF1BD08D5B00C7470E /* SlideMotion.m */,
+			);
+			path = "Slide Motion";
+			sourceTree = "<group>";
+		};
+		2E5DFEB81BD08E1000C7470E /* CustomSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFEB91BD08E1000C7470E /* CustomSelectViewController.h */,
+				2E5DFEBA1BD08E1000C7470E /* CustomSelectViewController.m */,
+				2E5DFED21BD09A8F00C7470E /* CustomSelectViewController+Configuration.h */,
+				2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */,
+				2E5DFEBB1BD08E1000C7470E /* CustomSelectViewController.xib */,
+				2E5DFED51BD0A02100C7470E /* CircleLayout.h */,
+				2E5DFED61BD0A02100C7470E /* CircleLayout.m */,
+			);
+			path = CustomSelectViewController;
+			sourceTree = "<group>";
+		};
+		2E5DFEBE1BD08F0800C7470E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFEBF1BD08F1800C7470E /* UIScreen+Utility.h */,
+				2E5DFEC01BD08F1800C7470E /* UIScreen+Utility.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2E5DFEC21BD098A600C7470E /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFEC31BD098EA00C7470E /* CustomSelectionListDatasource.h */,
+				2E5DFEC41BD098EA00C7470E /* CustomSelectionListDatasource.m */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		2E5DFECC1BD09A2200C7470E /* SelectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFECD1BD09A2200C7470E /* SelectionCell.h */,
+				2E5DFECE1BD09A2200C7470E /* SelectionCell.m */,
+				2E5DFECF1BD09A2200C7470E /* SelectionCell.xib */,
+			);
+			path = SelectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +214,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5DFEA01BD0822200C7470E /* LaunchScreen.storyboard in Resources */,
+				2E5DFED11BD09A2200C7470E /* SelectionCell.xib in Resources */,
+				2E5DFEAA1BD082F500C7470E /* LaunchScreen.xib in Resources */,
+				2E5DFEBD1BD08E1000C7470E /* CustomSelectViewController.xib in Resources */,
 				2E5DFE9D1BD0822200C7470E /* Assets.xcassets in Resources */,
-				2E5DFE9B1BD0822200C7470E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,32 +228,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5DFE981BD0822200C7470E /* ViewController.m in Sources */,
+				2E5DFED41BD09A8F00C7470E /* CustomSelectViewController+Configuration.m in Sources */,
+				2E5DFED01BD09A2200C7470E /* SelectionCell.m in Sources */,
+				2E5DFEC11BD08F1800C7470E /* UIScreen+Utility.m in Sources */,
+				2E5DFED71BD0A02100C7470E /* CircleLayout.m in Sources */,
+				2E5DFEC51BD098EA00C7470E /* CustomSelectionListDatasource.m in Sources */,
 				2E5DFE951BD0822200C7470E /* AppDelegate.m in Sources */,
 				2E5DFE921BD0822200C7470E /* main.m in Sources */,
+				2E5DFEBC1BD08E1000C7470E /* CustomSelectViewController.m in Sources */,
+				2E5DFEB01BD08D5B00C7470E /* SlideMotion+Calculation.m in Sources */,
+				2E5DFEB11BD08D5B00C7470E /* SlideMotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2E5DFE991BD0822200C7470E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E5DFE9A1BD0822200C7470E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2E5DFE9E1BD0822200C7470E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E5DFE9F1BD0822200C7470E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2E5DFEA21BD0822200C7470E /* Debug */ = {
@@ -298,6 +365,7 @@
 				2E5DFEA61BD0822200C7470E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

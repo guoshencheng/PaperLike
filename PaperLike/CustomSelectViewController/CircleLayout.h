@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CircleLayout.h
 //  PaperLike
 //
 //  Created by guoshencheng on 10/16/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CircleLayout : UICollectionViewFlowLayout
 
 @end
-
