@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="backgroundCollectionView" destination="U5C-Ub-Alm" id="i6I-iZ-mfl"/>
+                <outlet property="bottomCollectionView" destination="RAf-Vw-eUW" id="HtA-w6-mW2"/>
+                <outlet property="bottomCollectionViewBottomConstraint" destination="LPC-5g-tbc" id="Fz6-cf-iwT"/>
+                <outlet property="topView" destination="NjP-Kc-9OK" id="vAj-xi-MPH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="U5C-Ub-Alm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Z51-Wf-Jhg">
+                        <size key="itemSize" width="320" height="568"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-Vw-eUW" customClass="BottomCollectionView">
+                    <rect key="frame" x="0.0" y="313" width="320" height="255"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="255" id="LPC-5g-tbc"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Qri-U6-H8F">
+                        <size key="itemSize" width="320" height="255"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjP-Kc-9OK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="cho-2T-U7c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="U5C-Ub-Alm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1af-6a-FuU"/>
+                <constraint firstAttribute="bottom" secondItem="RAf-Vw-eUW" secondAttribute="bottom" id="ABH-bW-yFy"/>
+                <constraint firstItem="RAf-Vw-eUW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dbm-wT-CqE"/>
+                <constraint firstAttribute="trailing" secondItem="RAf-Vw-eUW" secondAttribute="trailing" id="Dgd-wW-gJx"/>
+                <constraint firstItem="NjP-Kc-9OK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bAs-aV-YZh"/>
+                <constraint firstAttribute="trailing" secondItem="NjP-Kc-9OK" secondAttribute="trailing" id="bUU-nT-gR7"/>
+                <constraint firstItem="U5C-Ub-Alm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fwo-Yu-xJi"/>
+                <constraint firstAttribute="trailing" secondItem="U5C-Ub-Alm" secondAttribute="trailing" id="n8P-HZ-S3t"/>
+                <constraint firstAttribute="bottom" secondItem="U5C-Ub-Alm" secondAttribute="bottom" id="oMc-uw-btV"/>
+                <constraint firstItem="NjP-Kc-9OK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="shK-pD-tGI"/>
+            </constraints>
+            <point key="canvasLocation" x="600" y="396"/>
+        </view>
+    </objects>
+</document>

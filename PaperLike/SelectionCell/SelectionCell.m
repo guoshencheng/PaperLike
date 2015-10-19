@@ -21,4 +21,8 @@
     self.cardView.layer.cornerRadius = 5;
 }
 
+- (void)updateCardView:(UIColor *)color {
+    self.cardView.backgroundColor = color;
+}
+
 @end

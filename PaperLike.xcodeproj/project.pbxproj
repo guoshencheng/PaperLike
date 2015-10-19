@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E417B351BD4906800C33EAE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B331BD4906800C33EAE /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B361BD4906800C33EAE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E417B341BD4906800C33EAE /* HomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		2E417B391BD4954800C33EAE /* HomeViewController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B381BD4954800C33EAE /* HomeViewController+Configuration.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B3C1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B3B1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B3F1BD496B600C33EAE /* BottomCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B3E1BD496B600C33EAE /* BottomCollectionViewDatasource.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B441BD4995B00C33EAE /* BackgroundCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B421BD4995B00C33EAE /* BackgroundCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B451BD4995B00C33EAE /* BackgroundCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E417B431BD4995B00C33EAE /* BackgroundCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2E417B4A1BD4A02F00C33EAE /* BottomContainerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B481BD4A02F00C33EAE /* BottomContainerCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B4B1BD4A02F00C33EAE /* BottomContainerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E417B491BD4A02F00C33EAE /* BottomContainerCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2E417B501BD4A13700C33EAE /* BottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B4E1BD4A13700C33EAE /* BottomCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2E417B511BD4A13700C33EAE /* BottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E417B4F1BD4A13700C33EAE /* BottomCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2E417B541BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E417B531BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.m */; settings = {ASSET_TAGS = (); }; };
+		2E5912331BD4D6D9002D8242 /* BottomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5912321BD4D6D9002D8242 /* BottomCollectionView.m */; settings = {ASSET_TAGS = (); }; };
 		2E5DFE921BD0822200C7470E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFE911BD0822200C7470E /* main.m */; };
 		2E5DFE951BD0822200C7470E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFE941BD0822200C7470E /* AppDelegate.m */; };
 		2E5DFE9D1BD0822200C7470E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFE9C1BD0822200C7470E /* Assets.xcassets */; };
@@ -21,9 +34,37 @@
 		2E5DFED11BD09A2200C7470E /* SelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5DFECF1BD09A2200C7470E /* SelectionCell.xib */; settings = {ASSET_TAGS = (); }; };
 		2E5DFED41BD09A8F00C7470E /* CustomSelectViewController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */; settings = {ASSET_TAGS = (); }; };
 		2E5DFED71BD0A02100C7470E /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFED61BD0A02100C7470E /* CircleLayout.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEE11BD0C5CA00C7470E /* PickUpMotion+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEDA1BD0C5CA00C7470E /* PickUpMotion+Animation.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEE21BD0C5CA00C7470E /* PickUpMotion+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEDC1BD0C5CA00C7470E /* PickUpMotion+Calculation.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEE31BD0C5CA00C7470E /* PickUpMotion+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEDE1BD0C5CA00C7470E /* PickUpMotion+Layout.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEE41BD0C5CA00C7470E /* PickUpMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEE71BD0C86700C7470E /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE61BD0C86700C7470E /* UIImage+Utility.m */; settings = {ASSET_TAGS = (); }; };
+		2E5DFEEA1BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E417B321BD4906800C33EAE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2E417B331BD4906800C33EAE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2E417B341BD4906800C33EAE /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2E417B371BD4954800C33EAE /* HomeViewController+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Configuration.h"; sourceTree = "<group>"; };
+		2E417B381BD4954800C33EAE /* HomeViewController+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Configuration.m"; sourceTree = "<group>"; };
+		2E417B3A1BD496A100C33EAE /* BackgroundCollectionViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundCollectionViewDatasource.h; sourceTree = "<group>"; };
+		2E417B3B1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundCollectionViewDatasource.m; sourceTree = "<group>"; };
+		2E417B3D1BD496B600C33EAE /* BottomCollectionViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewDatasource.h; sourceTree = "<group>"; };
+		2E417B3E1BD496B600C33EAE /* BottomCollectionViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewDatasource.m; sourceTree = "<group>"; };
+		2E417B411BD4995B00C33EAE /* BackgroundCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundCollectionViewCell.h; sourceTree = "<group>"; };
+		2E417B421BD4995B00C33EAE /* BackgroundCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundCollectionViewCell.m; sourceTree = "<group>"; };
+		2E417B431BD4995B00C33EAE /* BackgroundCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E417B471BD4A02F00C33EAE /* BottomContainerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomContainerCollectionViewCell.h; sourceTree = "<group>"; };
+		2E417B481BD4A02F00C33EAE /* BottomContainerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomContainerCollectionViewCell.m; sourceTree = "<group>"; };
+		2E417B491BD4A02F00C33EAE /* BottomContainerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomContainerCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E417B4D1BD4A13700C33EAE /* BottomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewCell.h; sourceTree = "<group>"; };
+		2E417B4E1BD4A13700C33EAE /* BottomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewCell.m; sourceTree = "<group>"; };
+		2E417B4F1BD4A13700C33EAE /* BottomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E417B521BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomContainerCollectionViewDatasource.h; sourceTree = "<group>"; };
+		2E417B531BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomContainerCollectionViewDatasource.m; sourceTree = "<group>"; };
+		2E5912311BD4D6D9002D8242 /* BottomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomCollectionView.h; sourceTree = "<group>"; };
+		2E5912321BD4D6D9002D8242 /* BottomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionView.m; sourceTree = "<group>"; };
 		2E5DFE8D1BD0822200C7470E /* PaperLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5DFE911BD0822200C7470E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E5DFE931BD0822200C7470E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +90,18 @@
 		2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomSelectViewController+Configuration.m"; sourceTree = "<group>"; };
 		2E5DFED51BD0A02100C7470E /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
 		2E5DFED61BD0A02100C7470E /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
+		2E5DFED91BD0C5CA00C7470E /* PickUpMotion+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PickUpMotion+Animation.h"; sourceTree = "<group>"; };
+		2E5DFEDA1BD0C5CA00C7470E /* PickUpMotion+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PickUpMotion+Animation.m"; sourceTree = "<group>"; };
+		2E5DFEDB1BD0C5CA00C7470E /* PickUpMotion+Calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PickUpMotion+Calculation.h"; sourceTree = "<group>"; };
+		2E5DFEDC1BD0C5CA00C7470E /* PickUpMotion+Calculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PickUpMotion+Calculation.m"; sourceTree = "<group>"; };
+		2E5DFEDD1BD0C5CA00C7470E /* PickUpMotion+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PickUpMotion+Layout.h"; sourceTree = "<group>"; };
+		2E5DFEDE1BD0C5CA00C7470E /* PickUpMotion+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PickUpMotion+Layout.m"; sourceTree = "<group>"; };
+		2E5DFEDF1BD0C5CA00C7470E /* PickUpMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickUpMotion.h; sourceTree = "<group>"; };
+		2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickUpMotion.m; sourceTree = "<group>"; };
+		2E5DFEE51BD0C86700C7470E /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		2E5DFEE61BD0C86700C7470E /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
+		2E5DFEE81BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomSelectViewController+PickUpMotionDelegate.h"; sourceTree = "<group>"; };
+		2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomSelectViewController+PickUpMotionDelegate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +115,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E417B311BD4904200C33EAE /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E417B321BD4906800C33EAE /* HomeViewController.h */,
+				2E417B331BD4906800C33EAE /* HomeViewController.m */,
+				2E417B371BD4954800C33EAE /* HomeViewController+Configuration.h */,
+				2E417B381BD4954800C33EAE /* HomeViewController+Configuration.m */,
+				2E417B341BD4906800C33EAE /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		2E417B401BD4994500C33EAE /* BackgroundCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E417B411BD4995B00C33EAE /* BackgroundCollectionViewCell.h */,
+				2E417B421BD4995B00C33EAE /* BackgroundCollectionViewCell.m */,
+				2E417B431BD4995B00C33EAE /* BackgroundCollectionViewCell.xib */,
+			);
+			path = BackgroundCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2E417B461BD4A00C00C33EAE /* BottomContainerCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E417B471BD4A02F00C33EAE /* BottomContainerCollectionViewCell.h */,
+				2E417B481BD4A02F00C33EAE /* BottomContainerCollectionViewCell.m */,
+				2E417B491BD4A02F00C33EAE /* BottomContainerCollectionViewCell.xib */,
+			);
+			path = BottomContainerCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2E417B4C1BD4A12400C33EAE /* BottomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E417B4D1BD4A13700C33EAE /* BottomCollectionViewCell.h */,
+				2E417B4E1BD4A13700C33EAE /* BottomCollectionViewCell.m */,
+				2E417B4F1BD4A13700C33EAE /* BottomCollectionViewCell.xib */,
+			);
+			path = BottomCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		2E5DFE841BD0822200C7470E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +176,11 @@
 		2E5DFE8F1BD0822200C7470E /* PaperLike */ = {
 			isa = PBXGroup;
 			children = (
+				2E417B4C1BD4A12400C33EAE /* BottomCollectionViewCell */,
+				2E417B461BD4A00C00C33EAE /* BottomContainerCollectionViewCell */,
+				2E417B401BD4994500C33EAE /* BackgroundCollectionViewCell */,
+				2E417B311BD4904200C33EAE /* HomeViewController */,
+				2E5DFED81BD0C5CA00C7470E /* PickUp Motion */,
 				2E5DFECC1BD09A2200C7470E /* SelectionCell */,
 				2E5DFEC21BD098A600C7470E /* Datasource */,
 				2E5DFEBE1BD08F0800C7470E /* Tools */,
@@ -88,6 +188,8 @@
 				2E5DFEAB1BD08D5B00C7470E /* Slide Motion */,
 				2E5DFE931BD0822200C7470E /* AppDelegate.h */,
 				2E5DFE941BD0822200C7470E /* AppDelegate.m */,
+				2E5912311BD4D6D9002D8242 /* BottomCollectionView.h */,
+				2E5912321BD4D6D9002D8242 /* BottomCollectionView.m */,
 				2E5DFEA91BD082F500C7470E /* LaunchScreen.xib */,
 				2E5DFE9C1BD0822200C7470E /* Assets.xcassets */,
 				2E5DFEA11BD0822200C7470E /* Info.plist */,
@@ -122,6 +224,8 @@
 				2E5DFEBA1BD08E1000C7470E /* CustomSelectViewController.m */,
 				2E5DFED21BD09A8F00C7470E /* CustomSelectViewController+Configuration.h */,
 				2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */,
+				2E5DFEE81BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.h */,
+				2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */,
 				2E5DFEBB1BD08E1000C7470E /* CustomSelectViewController.xib */,
 				2E5DFED51BD0A02100C7470E /* CircleLayout.h */,
 				2E5DFED61BD0A02100C7470E /* CircleLayout.m */,
@@ -132,6 +236,8 @@
 		2E5DFEBE1BD08F0800C7470E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2E5DFEE51BD0C86700C7470E /* UIImage+Utility.h */,
+				2E5DFEE61BD0C86700C7470E /* UIImage+Utility.m */,
 				2E5DFEBF1BD08F1800C7470E /* UIScreen+Utility.h */,
 				2E5DFEC01BD08F1800C7470E /* UIScreen+Utility.m */,
 			);
@@ -143,6 +249,12 @@
 			children = (
 				2E5DFEC31BD098EA00C7470E /* CustomSelectionListDatasource.h */,
 				2E5DFEC41BD098EA00C7470E /* CustomSelectionListDatasource.m */,
+				2E417B3A1BD496A100C33EAE /* BackgroundCollectionViewDatasource.h */,
+				2E417B3B1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m */,
+				2E417B3D1BD496B600C33EAE /* BottomCollectionViewDatasource.h */,
+				2E417B3E1BD496B600C33EAE /* BottomCollectionViewDatasource.m */,
+				2E417B521BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.h */,
+				2E417B531BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.m */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -155,6 +267,21 @@
 				2E5DFECF1BD09A2200C7470E /* SelectionCell.xib */,
 			);
 			path = SelectionCell;
+			sourceTree = "<group>";
+		};
+		2E5DFED81BD0C5CA00C7470E /* PickUp Motion */ = {
+			isa = PBXGroup;
+			children = (
+				2E5DFED91BD0C5CA00C7470E /* PickUpMotion+Animation.h */,
+				2E5DFEDA1BD0C5CA00C7470E /* PickUpMotion+Animation.m */,
+				2E5DFEDB1BD0C5CA00C7470E /* PickUpMotion+Calculation.h */,
+				2E5DFEDC1BD0C5CA00C7470E /* PickUpMotion+Calculation.m */,
+				2E5DFEDD1BD0C5CA00C7470E /* PickUpMotion+Layout.h */,
+				2E5DFEDE1BD0C5CA00C7470E /* PickUpMotion+Layout.m */,
+				2E5DFEDF1BD0C5CA00C7470E /* PickUpMotion.h */,
+				2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */,
+			);
+			path = "PickUp Motion";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5DFED11BD09A2200C7470E /* SelectionCell.xib in Resources */,
+				2E417B511BD4A13700C33EAE /* BottomCollectionViewCell.xib in Resources */,
 				2E5DFEAA1BD082F500C7470E /* LaunchScreen.xib in Resources */,
+				2E417B361BD4906800C33EAE /* HomeViewController.xib in Resources */,
+				2E417B4B1BD4A02F00C33EAE /* BottomContainerCollectionViewCell.xib in Resources */,
 				2E5DFEBD1BD08E1000C7470E /* CustomSelectViewController.xib in Resources */,
+				2E417B451BD4995B00C33EAE /* BackgroundCollectionViewCell.xib in Resources */,
 				2E5DFE9D1BD0822200C7470E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,15 +359,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E417B391BD4954800C33EAE /* HomeViewController+Configuration.m in Sources */,
+				2E5DFEE11BD0C5CA00C7470E /* PickUpMotion+Animation.m in Sources */,
+				2E5DFEE21BD0C5CA00C7470E /* PickUpMotion+Calculation.m in Sources */,
 				2E5DFED41BD09A8F00C7470E /* CustomSelectViewController+Configuration.m in Sources */,
+				2E417B3F1BD496B600C33EAE /* BottomCollectionViewDatasource.m in Sources */,
+				2E417B441BD4995B00C33EAE /* BackgroundCollectionViewCell.m in Sources */,
 				2E5DFED01BD09A2200C7470E /* SelectionCell.m in Sources */,
+				2E417B3C1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m in Sources */,
 				2E5DFEC11BD08F1800C7470E /* UIScreen+Utility.m in Sources */,
+				2E417B541BD4A19C00C33EAE /* BottomContainerCollectionViewDatasource.m in Sources */,
 				2E5DFED71BD0A02100C7470E /* CircleLayout.m in Sources */,
 				2E5DFEC51BD098EA00C7470E /* CustomSelectionListDatasource.m in Sources */,
+				2E5DFEE71BD0C86700C7470E /* UIImage+Utility.m in Sources */,
+				2E5912331BD4D6D9002D8242 /* BottomCollectionView.m in Sources */,
+				2E417B351BD4906800C33EAE /* HomeViewController.m in Sources */,
 				2E5DFE951BD0822200C7470E /* AppDelegate.m in Sources */,
 				2E5DFE921BD0822200C7470E /* main.m in Sources */,
+				2E417B501BD4A13700C33EAE /* BottomCollectionViewCell.m in Sources */,
+				2E417B4A1BD4A02F00C33EAE /* BottomContainerCollectionViewCell.m in Sources */,
 				2E5DFEBC1BD08E1000C7470E /* CustomSelectViewController.m in Sources */,
 				2E5DFEB01BD08D5B00C7470E /* SlideMotion+Calculation.m in Sources */,
+				2E5DFEE41BD0C5CA00C7470E /* PickUpMotion.m in Sources */,
+				2E5DFEE31BD0C5CA00C7470E /* PickUpMotion+Layout.m in Sources */,
+				2E5DFEEA1BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m in Sources */,
 				2E5DFEB11BD08D5B00C7470E /* SlideMotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,4 +13,6 @@
 
 @interface SelectionCell : UICollectionViewCell
 
+- (void)updateCardView:(UIColor *)color;
+
 @end

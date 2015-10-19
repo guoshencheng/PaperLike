@@ -13,6 +13,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SelectionCell *cell = (SelectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:SELECTION_COLLECTION_CELL_ID forIndexPath:indexPath];
+    if (self.configureCellBlock) {
+        self.configureCellBlock(cell, indexPath);
+    }
+    [cell updateCardView:[self.selections objectAtIndex:indexPath.item]];
     return cell;
 }
 

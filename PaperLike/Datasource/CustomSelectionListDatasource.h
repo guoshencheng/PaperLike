@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ConfigureCellBlock) (UICollectionViewCell *cell, NSIndexPath *indexPath);
+
 @interface CustomSelectionListDatasource : NSObject <UICollectionViewDataSource>
 @property (strong, nonatomic) NSArray *selections;
+@property (strong, nonatomic) ConfigureCellBlock configureCellBlock;
 @end

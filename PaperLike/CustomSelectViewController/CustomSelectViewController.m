@@ -9,10 +9,6 @@
 #import "CustomSelectViewController.h"
 #import "CustomSelectViewController+Configuration.h"
 
-@interface CustomSelectViewController ()
-
-@end
-
 @implementation CustomSelectViewController
 
 + (instancetype)create {
@@ -31,6 +27,16 @@
 
 - (IBAction)didClickDoneButton:(id)sender {
     
+}
+
+#pragma mark - PickUpMotionDataSource
+
+- (UIView *)containerViewOfPickUpmotion:(PickUpMotion *)pickUpmotion {
+    return self.view;
+}
+
+- (CGRect)pickUpmotion:(PickUpMotion *)pickUpmotion frameOfView:(UIView *)view {
+    return [self.selectionCollectionView convertRect:view.frame toView:self.view];
 }
 
 @end
