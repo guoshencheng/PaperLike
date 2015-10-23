@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController+Configuration.h"
+#import "CustomSelectViewController.h"
 #import "BackgroundCollectionViewCell.h"
 #import "BottomContainerCollectionViewCell.h"
 #import "UIScreen+Utility.h"
@@ -26,6 +27,10 @@
     self.backgroundCollectionView.delegate = self;
     [self.backgroundCollectionView registerNib:[UINib nibWithNibName:BACKGROUND_COLLECTIONVIEW_CELL_NIBNAME bundle:nil] forCellWithReuseIdentifier:BACKGROUND_COLLECTIONVIEW_CELL_ID];
     self.backgroundCollectionViewDatasource = [BackgroundCollectionViewDatasource new];
+    UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressBackgroundCell:)];
+    self.backgroundCollectionViewDatasource.backgroundCellConfigurationBlock = ^(NSIndexPath *indexPath, UICollectionViewCell *cell) {
+        [cell addGestureRecognizer:gesture];
+    };
     self.backgroundCollectionViewDatasource.datas = @[@"", @"", @""];
     self.backgroundCollectionView.dataSource = self.backgroundCollectionViewDatasource;
 }
@@ -48,6 +53,13 @@
     self.slideMotion.delegate = self;
     self.slideMotion.dataSource = self;
     [self.slideMotion attachToView:self.bottomCollectionView];
+}
+
+- (void)longPressBackgroundCell:(UILongPressGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        CustomSelectViewController *customSelectViewController = [CustomSelectViewController create];
+        [self.navigationController pushViewController:customSelectViewController animated:YES];
+    }
 }
 
 @end

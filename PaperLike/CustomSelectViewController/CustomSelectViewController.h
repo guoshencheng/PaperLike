@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomSelectionListDatasource.h"
+#import "DragableFlowLayout.h"
 #import "CircleLayout.h"
-#import "PickUpMotion.h"
 
-@interface CustomSelectViewController : UIViewController <PickUpMotionDataSource, PickUpMotionDelegate>
+@interface CustomSelectViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *topBarView;
 @property (weak, nonatomic) IBOutlet UILabel *topBarTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *doneLabel;
@@ -27,7 +27,7 @@
 @property (strong, nonatomic) CustomSelectionListDatasource *selectedListDatasource;
 @property (strong, nonatomic) CustomSelectionListDatasource *selectionListDatasource;
 @property (strong, nonatomic) CircleLayout *circleLayout;
-@property (strong, nonatomic) PickUpMotion *pickUpMotion;
+@property (strong, nonatomic) DragableFlowLayout *dragableFlowLayout;
 
 + (instancetype)create;
 

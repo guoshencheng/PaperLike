@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^BackgroundCellConfigurationBlock)(NSIndexPath *indexPath, UICollectionViewCell *cell);
+
 @interface BackgroundCollectionViewDatasource : NSObject<UICollectionViewDataSource>
 
 @property (strong, nonatomic) NSArray *datas;
+@property (strong, nonatomic) BackgroundCellConfigurationBlock backgroundCellConfigurationBlock;
 
 @end

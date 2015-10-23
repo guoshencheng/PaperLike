@@ -13,6 +13,9 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BackgroundCollectionViewCell *backgroundCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:BACKGROUND_COLLECTIONVIEW_CELL_ID forIndexPath:indexPath];
+    if (self.backgroundCellConfigurationBlock) {
+        self.backgroundCellConfigurationBlock(indexPath, backgroundCollectionViewCell);
+    }
     return backgroundCollectionViewCell;
 }
 

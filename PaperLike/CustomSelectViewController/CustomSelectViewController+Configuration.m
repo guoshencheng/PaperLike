@@ -12,7 +12,6 @@
 @implementation CustomSelectViewController (Configuration)
 
 - (void)configureViews {
-    [self configurePickUpMotion];
     [self configureSelectedView];
     [self configureSelectionView];
 }
@@ -22,28 +21,33 @@
     self.selectedListDatasource.selections = @[[UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor greenColor], [UIColor blueColor], [UIColor grayColor], [UIColor magentaColor], [UIColor purpleColor]];
     [self.selectedCollectionView registerNib:[UINib nibWithNibName:SELECTION_COLLECTION_CELL_NIBNAME bundle:nil] forCellWithReuseIdentifier:SELECTION_COLLECTION_CELL_ID];
     self.selectedCollectionView.dataSource = self.selectedListDatasource;
+    self.dragableFlowLayout = [[DragableFlowLayout alloc] init];
+    __weak typeof(self) weakSelf = self;
+    self.dragableFlowLayout.moveItemData = ^(NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath) {
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:weakSelf.selectedListDatasource.selections];
+        UIColor *color = [array objectAtIndex:fromIndexPath.item];
+        [array removeObjectAtIndex:fromIndexPath.item];
+        [array insertObject:color atIndex:toIndexPath.item];
+        weakSelf.selectedListDatasource.selections = array;
+    };
+    self.selectedCollectionView.collectionViewLayout = self.dragableFlowLayout;
 }
 
 - (void)configureSelectionView {
-    self.circleLayout = [CircleLayout new];
     self.selectionListDatasource = [CustomSelectionListDatasource new];
     self.selectionListDatasource.selections = @[[UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor greenColor], [UIColor blueColor], [UIColor grayColor], [UIColor magentaColor], [UIColor purpleColor]];
+    self.circleLayout = [CircleLayout new];
+    __weak typeof(self) weakSelf = self;
+    self.circleLayout.moveItemData = ^(NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath) {
+        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:weakSelf.self.selectionListDatasource.selections];
+        UIColor *color = [array objectAtIndex:fromIndexPath.item];
+        [array removeObjectAtIndex:fromIndexPath.item];
+        [array insertObject:color atIndex:toIndexPath.item];
+        weakSelf.selectionListDatasource.selections = array;
+    };
     self.selectionCollectionView.collectionViewLayout = self.circleLayout;
     [self.selectionCollectionView registerNib:[UINib nibWithNibName:SELECTION_COLLECTION_CELL_NIBNAME bundle:nil] forCellWithReuseIdentifier:SELECTION_COLLECTION_CELL_ID];
     self.selectionCollectionView.dataSource = self.selectionListDatasource;
-    __weak typeof(self) weakSelf = self;
-    self.selectionListDatasource.configureCellBlock = ^(UICollectionViewCell *cell, NSIndexPath *indexPath) {
-        [weakSelf.pickUpMotion attachToView:cell];
-        cell.tag = indexPath.item;
-    };
-}
-
-- (void)configurePickUpMotion {
-    self.pickUpMotion = [PickUpMotion new];
-    self.pickUpMotion.style = PickUpMotionVerticalFreeStyle;
-    self.pickUpMotion.animationType = PickUpMotionAnimationFlyBack;
-    self.pickUpMotion.delegate = self;
-    self.pickUpMotion.dataSource = self;
 }
 
 @end

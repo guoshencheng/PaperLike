@@ -39,7 +39,8 @@
 		2E5DFEE31BD0C5CA00C7470E /* PickUpMotion+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEDE1BD0C5CA00C7470E /* PickUpMotion+Layout.m */; settings = {ASSET_TAGS = (); }; };
 		2E5DFEE41BD0C5CA00C7470E /* PickUpMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */; settings = {ASSET_TAGS = (); }; };
 		2E5DFEE71BD0C86700C7470E /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE61BD0C86700C7470E /* UIImage+Utility.m */; settings = {ASSET_TAGS = (); }; };
-		2E5DFEEA1BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		2EEE77ED1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE77EC1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		2EEE77F31BD8E5050071B1E4 /* DragableFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE77F21BD8E5050071B1E4 /* DragableFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,8 +101,10 @@
 		2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickUpMotion.m; sourceTree = "<group>"; };
 		2E5DFEE51BD0C86700C7470E /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
 		2E5DFEE61BD0C86700C7470E /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
-		2E5DFEE81BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomSelectViewController+PickUpMotionDelegate.h"; sourceTree = "<group>"; };
-		2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CustomSelectViewController+PickUpMotionDelegate.m"; sourceTree = "<group>"; };
+		2EEE77EB1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearrangeableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		2EEE77EC1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearrangeableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		2EEE77F11BD8E5050071B1E4 /* DragableFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragableFlowLayout.h; sourceTree = "<group>"; };
+		2EEE77F21BD8E5050071B1E4 /* DragableFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragableFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,7 @@
 		2E5DFE8F1BD0822200C7470E /* PaperLike */ = {
 			isa = PBXGroup;
 			children = (
+				2EEE77EA1BD8BA000071B1E4 /* RearrangeableCollectionViewFlowLayout */,
 				2E417B4C1BD4A12400C33EAE /* BottomCollectionViewCell */,
 				2E417B461BD4A00C00C33EAE /* BottomContainerCollectionViewCell */,
 				2E417B401BD4994500C33EAE /* BackgroundCollectionViewCell */,
@@ -224,11 +228,11 @@
 				2E5DFEBA1BD08E1000C7470E /* CustomSelectViewController.m */,
 				2E5DFED21BD09A8F00C7470E /* CustomSelectViewController+Configuration.h */,
 				2E5DFED31BD09A8F00C7470E /* CustomSelectViewController+Configuration.m */,
-				2E5DFEE81BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.h */,
-				2E5DFEE91BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m */,
 				2E5DFEBB1BD08E1000C7470E /* CustomSelectViewController.xib */,
 				2E5DFED51BD0A02100C7470E /* CircleLayout.h */,
 				2E5DFED61BD0A02100C7470E /* CircleLayout.m */,
+				2EEE77F11BD8E5050071B1E4 /* DragableFlowLayout.h */,
+				2EEE77F21BD8E5050071B1E4 /* DragableFlowLayout.m */,
 			);
 			path = CustomSelectViewController;
 			sourceTree = "<group>";
@@ -282,6 +286,15 @@
 				2E5DFEE01BD0C5CA00C7470E /* PickUpMotion.m */,
 			);
 			path = "PickUp Motion";
+			sourceTree = "<group>";
+		};
+		2EEE77EA1BD8BA000071B1E4 /* RearrangeableCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE77EB1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.h */,
+				2EEE77EC1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.m */,
+			);
+			path = RearrangeableCollectionViewFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +378,7 @@
 				2E5DFED41BD09A8F00C7470E /* CustomSelectViewController+Configuration.m in Sources */,
 				2E417B3F1BD496B600C33EAE /* BottomCollectionViewDatasource.m in Sources */,
 				2E417B441BD4995B00C33EAE /* BackgroundCollectionViewCell.m in Sources */,
+				2EEE77ED1BD8BA4B0071B1E4 /* RearrangeableCollectionViewFlowLayout.m in Sources */,
 				2E5DFED01BD09A2200C7470E /* SelectionCell.m in Sources */,
 				2E417B3C1BD496A100C33EAE /* BackgroundCollectionViewDatasource.m in Sources */,
 				2E5DFEC11BD08F1800C7470E /* UIScreen+Utility.m in Sources */,
@@ -382,7 +396,7 @@
 				2E5DFEB01BD08D5B00C7470E /* SlideMotion+Calculation.m in Sources */,
 				2E5DFEE41BD0C5CA00C7470E /* PickUpMotion.m in Sources */,
 				2E5DFEE31BD0C5CA00C7470E /* PickUpMotion+Layout.m in Sources */,
-				2E5DFEEA1BD0D44700C7470E /* CustomSelectViewController+PickUpMotionDelegate.m in Sources */,
+				2EEE77F31BD8E5050071B1E4 /* DragableFlowLayout.m in Sources */,
 				2E5DFEB11BD08D5B00C7470E /* SlideMotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

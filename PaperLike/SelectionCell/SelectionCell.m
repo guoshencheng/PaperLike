@@ -10,7 +10,7 @@
 
 @interface SelectionCell ()
 
-@property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (strong, nonatomic) IBOutlet UIView *cardView;
 
 
 @end

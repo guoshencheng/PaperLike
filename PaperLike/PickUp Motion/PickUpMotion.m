@@ -40,7 +40,7 @@
       return; // skip if already attached
     }
   }
-  UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:view action:nil];
+  UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] init];
   panRecognizer.delegate = self;
   [view addGestureRecognizer:panRecognizer];
 }
