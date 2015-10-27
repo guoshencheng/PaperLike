@@ -73,6 +73,9 @@
                 CGPoint offset = CGPointMake(pointPressedInCanvans.x - cellInCanvasFrame.origin.x, pointPressedInCanvans.y - cellInCanvasFrame.origin.y);
                 NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
                 self.bundle = [Bundle bundleWithOffset:offset sourceCell:cell representationView:representationView currentIndex:indexPath];
+                if (self.sendIfShouldBeganGesture) {
+                    self.sendIfShouldBeganGesture(self.bundle);
+                }
                 break;
             }
         }
@@ -97,35 +100,35 @@
     }
 }
 
-- (void)checkForDraggingAtTheEdgeAndAnimatePaging:(UILongPressGestureRecognizer *)gestureRecognizer {
-    if (self.animating) {
-        return;
-    }
-    if (self.bundle) {
-        CGRect nextPageRect = self.collectionView.bounds;
-        if (CGRectIntersectsRect(self.bundle.representationImageView.frame, [[self.hitTestRectagles objectForKey:@"left"] CGRectValue])) {
-            nextPageRect.origin.x -= nextPageRect.size.width / 2;
-            if (nextPageRect.origin.x < 0.0) {
-                nextPageRect.origin.x = 0.0;
-            }
-            
-        } else if (CGRectIntersectsRect(self.bundle.representationImageView.frame, [[self.hitTestRectagles objectForKey:@"right"] CGRectValue])) {
-            nextPageRect.origin.x += nextPageRect.size.width / 2;
-            if (nextPageRect.origin.x >= self.collectionView.contentSize.width - nextPageRect.size.width) {
-                nextPageRect.origin.x = self.collectionView.contentSize.width - nextPageRect.size.width;
-            }
-        }
-        if (!CGRectEqualToRect(nextPageRect, self.collectionView.bounds)) {
-            CGFloat delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC));
-            dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-                self.animating = NO;
-                [self handleGesture:gestureRecognizer];
-            });
-            self.animating = YES;
-            [self.collectionView scrollRectToVisible:nextPageRect animated:YES];
-        }
-    }
-}
+//- (void)checkForDraggingAtTheEdgeAndAnimatePaging:(UILongPressGestureRecognizer *)gestureRecognizer {
+//    if (self.animating) {
+//        return;
+//    }
+//    if (self.bundle) {
+//        CGRect nextPageRect = self.collectionView.bounds;
+//        if (CGRectIntersectsRect(self.bundle.representationImageView.frame, [[self.hitTestRectagles objectForKey:@"left"] CGRectValue])) {
+//            nextPageRect.origin.x -= nextPageRect.size.width / 2;
+//            if (nextPageRect.origin.x < 0.0) {
+//                nextPageRect.origin.x = 0.0;
+//            }
+//            
+//        } else if (CGRectIntersectsRect(self.bundle.representationImageView.frame, [[self.hitTestRectagles objectForKey:@"right"] CGRectValue])) {
+//            nextPageRect.origin.x += nextPageRect.size.width / 2;
+//            if (nextPageRect.origin.x >= self.collectionView.contentSize.width - nextPageRect.size.width) {
+//                nextPageRect.origin.x = self.collectionView.contentSize.width - nextPageRect.size.width;
+//            }
+//        }
+//        if (!CGRectEqualToRect(nextPageRect, self.collectionView.bounds)) {
+//            CGFloat delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC));
+//            dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+//                self.animating = NO;
+//                [self handleGesture:gestureRecognizer];
+//            });
+//            self.animating = YES;
+//            [self.collectionView scrollRectToVisible:nextPageRect animated:YES];
+//        }
+//    }
+//}
 
 - (void)handleGestureBegan:(UILongPressGestureRecognizer *)gesture {
     self.bundle.sourceCell.hidden = YES;
@@ -133,6 +136,21 @@
     [UIView animateWithDuration:0.2 animations:^{
         self.bundle.representationImageView.transform = CGAffineTransformIdentity;
     }];
+    if (self.sendGestureBeganOut) {
+        self.sendGestureBeganOut(gesture);
+    }
+}
+
+- (void)publicHandleGestureBegan:(UILongPressGestureRecognizer *)gesture {
+    CGPoint gesturePoint = [gesture locationInView:self.collectionView];
+    gesturePoint.y = self.collectionView.frame.size.height / 2;
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:gesturePoint];
+    if (self.addItemData) {
+        self.addItemData(indexPath);
+    }
+    self.currentIndexPath = [NSIndexPath indexPathForItem:self.bundle.currentIndexPath.item inSection:self.bundle.currentIndexPath.section];
+    [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+    self.publicSourceCell = [self.collectionView cellForItemAtIndexPath:indexPath];
 }
 
 - (void)handleGestureChanged:(UILongPressGestureRecognizer *)gesture dragPointOnCanvas:(CGPoint)dragPointOnCanvas {
@@ -144,7 +162,7 @@
     gesturePoint.y = self.collectionView.frame.size.height / 2;
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:gesturePoint];
     if (indexPath) {
-        [self checkForDraggingAtTheEdgeAndAnimatePaging:gesture];
+        //[self checkForDraggingAtTheEdgeAndAnimatePaging:gesture];
         if (![indexPath isEqual:self.bundle.currentIndexPath]) {
             if (self.moveItemData) {
                 self.moveItemData(self.bundle.currentIndexPath, indexPath);
@@ -154,18 +172,68 @@
         }
         
     }
-    
+    if (self.sendGestureChangedOut) {
+        self.sendGestureChangedOut(gesture, dragPointOnCanvas);
+    }
+}
+
+- (void)publicHandleGestureChanged:(UILongPressGestureRecognizer *)gesture dragPointOnCanvas:(CGPoint)dragPointOnCanvas {
+    CGPoint gesturePoint = [gesture locationInView:self.collectionView];
+    gesturePoint.y = self.collectionView.frame.size.height / 2;
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:gesturePoint];
+    if (indexPath) {
+        if (![indexPath isEqual:self.currentIndexPath]) {
+            if (self.moveItemData) {
+                self.moveItemData(self.currentIndexPath, indexPath);
+            }
+            [self.collectionView moveItemAtIndexPath:self.currentIndexPath toIndexPath:indexPath];
+            self.currentIndexPath = indexPath;
+        }
+        
+    }
 }
 
 - (void)handleGestureEnded:(UILongPressGestureRecognizer *)gesture dragPointOnCanvas:(CGPoint)dragPointOnCanvas {
-    CGRect sourceCellInCanvas = [self.canvas convertRect:self.bundle.sourceCell.frame fromView:self.collectionView];
+    if (self.checkIfBack(dragPointOnCanvas)) {
+        CGRect sourceCellInCanvas = [self.canvas convertRect:self.bundle.sourceCell.frame fromView:self.collectionView];
+        sourceCellInCanvas.size = self.itemSize;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.bundle.representationImageView.frame = sourceCellInCanvas;
+            self.bundle.representationImageView.transform = self.bundle.sourceCell.transform;
+        } completion:^(BOOL finished) {
+            self.bundle.sourceCell.hidden = NO;
+            [self.bundle.representationImageView removeFromSuperview];
+            [self.collectionView reloadData];
+            self.bundle = nil;
+        }];
+        if (self.sendGestureEndedOut) {
+            self.sendGestureEndedOut(gesture, dragPointOnCanvas);
+        }
+    } else {
+        if (self.sendIfShouldFlyToOthers) {
+            self.sendIfShouldFlyToOthers();
+        }
+    }
+}
+
+- (void)publicHandleGestureEnded:(UILongPressGestureRecognizer *)gesture dragPointOnCanvas:(CGPoint)dragPointOnCanvas {
+    if (self.deleteItemData) {
+        self.deleteItemData([self.collectionView indexPathForCell:self.publicSourceCell]);
+    }
+    [self.collectionView deleteItemsAtIndexPaths:@[[self.collectionView indexPathForCell:self.publicSourceCell]]];
+}
+
+- (void)publicAnimationAddCell {
+    CGRect sourceCellInCanvas = [self.canvas convertRect:self.publicSourceCell.frame fromView:self.collectionView];
     sourceCellInCanvas.size = self.itemSize;
     [UIView animateWithDuration:0.2 animations:^{
         self.bundle.representationImageView.frame = sourceCellInCanvas;
         self.bundle.representationImageView.transform = self.bundle.sourceCell.transform;
     } completion:^(BOOL finished) {
+        if (self.finishAnimationForCellMove) {
+            self.finishAnimationForCellMove();
+        }
         self.bundle.sourceCell.hidden = NO;
-        [self.bundle.representationImageView removeFromSuperview];
         [self.collectionView reloadData];
         self.bundle = nil;
     }];
