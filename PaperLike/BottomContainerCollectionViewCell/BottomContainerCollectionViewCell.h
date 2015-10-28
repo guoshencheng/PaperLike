@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) BottomContainerCollectionViewDatasource *bottomContainerCollectionViewDatasource;
 
+- (void)reloadData;
+
 @end

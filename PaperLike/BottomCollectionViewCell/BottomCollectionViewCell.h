@@ -13,4 +13,6 @@
 
 @interface BottomCollectionViewCell : UICollectionViewCell
 
+- (void)updateWithImage:(UIImage *)image;
+
 @end

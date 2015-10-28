@@ -13,11 +13,17 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BottomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BOTTOM_COLLECTIONVIEW_CELL_ID forIndexPath:indexPath];
+    NSString *imageName = [NSString stringWithFormat:@"%@%@%@", self.name, @(indexPath.item + 1), @".jpg"];
+    UIImage *image = [UIImage imageNamed:imageName];
+    [cell updateWithImage:image];
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.datas.count;
+    if (!self.name) {
+        return 0;
+    }
+    return 6;
 }
 
 @end

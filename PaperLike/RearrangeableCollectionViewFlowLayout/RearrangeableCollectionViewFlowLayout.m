@@ -148,7 +148,7 @@
     if (self.addItemData) {
         self.addItemData(indexPath);
     }
-    self.currentIndexPath = [NSIndexPath indexPathForItem:self.bundle.currentIndexPath.item inSection:self.bundle.currentIndexPath.section];
+    //self.currentIndexPath = [NSIndexPath indexPathForItem:self.bundle.currentIndexPath.item inSection:self.bundle.currentIndexPath.section];
     [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
     self.publicSourceCell = [self.collectionView cellForItemAtIndexPath:indexPath];
 }
@@ -182,12 +182,13 @@
     gesturePoint.y = self.collectionView.frame.size.height / 2;
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:gesturePoint];
     if (indexPath) {
-        if (![indexPath isEqual:self.currentIndexPath]) {
+        NSIndexPath *curentIndexPath = [self.collectionView indexPathForCell:self.publicSourceCell];
+        if (![indexPath isEqual:curentIndexPath]) {
             if (self.moveItemData) {
-                self.moveItemData(self.currentIndexPath, indexPath);
+                self.moveItemData(curentIndexPath, indexPath);
             }
-            [self.collectionView moveItemAtIndexPath:self.currentIndexPath toIndexPath:indexPath];
-            self.currentIndexPath = indexPath;
+            [self.collectionView moveItemAtIndexPath:curentIndexPath toIndexPath:indexPath];
+            //self.currentIndexPath = indexPath;
         }
         
     }

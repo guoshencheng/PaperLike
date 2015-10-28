@@ -43,7 +43,7 @@
     self.bottomCollectionView.collectionViewLayout = layout;
     [self.bottomCollectionView registerNib:[UINib nibWithNibName:BOTTOM_CONTAINER_COLLECTIONVIEW_CELL_NIBNAME bundle:nil] forCellWithReuseIdentifier:BOTTOM_CONTAINER_COLLECTIONVIEW_CELL_ID];
     self.bottomCollectionViewDatasource = [BottomCollectionViewDatasource new];
-    self.bottomCollectionViewDatasource.datas = @[@"", @"", @""];
+    self.bottomCollectionViewDatasource.datas = @[@"mei_shi", @"li_che", @"li_jiang"];
     self.bottomCollectionView.dataSource = self.bottomCollectionViewDatasource;
 }
 

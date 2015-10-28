@@ -8,10 +8,21 @@
 
 #import "BottomCollectionViewCell.h"
 
+@interface BottomCollectionViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@end
+
+
 @implementation BottomCollectionViewCell
 
 - (void)awakeFromNib {
     self.layer.cornerRadius = 5;
+}
+
+- (void)updateWithImage:(UIImage *)image {
+    self.imageView.image = image;
 }
 
 @end

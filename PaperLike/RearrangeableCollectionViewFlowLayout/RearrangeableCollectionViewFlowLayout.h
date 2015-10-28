@@ -34,7 +34,7 @@ typedef void (^SendIfShouldFlyToOthers)();
 
 @property (assign, nonatomic) BOOL animating;
 @property (strong, nonatomic) UICollectionViewCell *publicSourceCell;
-@property (strong, nonatomic) NSIndexPath *currentIndexPath;
+//@property (strong, nonatomic) NSIndexPath *currentIndexPath;
 @property (assign, nonatomic) CGRect collectionViewFrameInCanvas;
 @property (strong, nonatomic) NSMutableDictionary *hitTestRectagles;
 @property (strong, nonatomic) UIView *canvas;

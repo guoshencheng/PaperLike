@@ -10,6 +10,6 @@
 
 @interface BottomContainerCollectionViewDatasource : NSObject<UICollectionViewDataSource>
 
-@property (strong, nonatomic) NSArray *datas;
+@property (strong, nonatomic) NSString *name;;
 
 @end

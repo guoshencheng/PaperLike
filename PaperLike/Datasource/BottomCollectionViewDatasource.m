@@ -13,6 +13,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BottomContainerCollectionViewCell *bottomContainerCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:BOTTOM_CONTAINER_COLLECTIONVIEW_CELL_ID forIndexPath:indexPath];
+    bottomContainerCollectionViewCell.bottomContainerCollectionViewDatasource.name = [self.datas objectAtIndex:indexPath.item];
+    [bottomContainerCollectionViewCell reloadData];
     return bottomContainerCollectionViewCell;
 }
 
