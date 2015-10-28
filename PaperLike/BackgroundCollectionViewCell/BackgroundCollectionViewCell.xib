@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <animations/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3f-dw-XqW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkP-Xi-jKY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                         <subviews>
@@ -57,7 +62,10 @@
             <animations/>
             <constraints>
                 <constraint firstItem="1FP-Xo-ZXa" firstAttribute="top" secondItem="MkP-Xi-jKY" secondAttribute="bottom" id="7VE-9L-Fsx"/>
+                <constraint firstItem="i3f-dw-XqW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9Wf-Qw-XSj"/>
+                <constraint firstAttribute="trailing" secondItem="i3f-dw-XqW" secondAttribute="trailing" id="Gxn-VJ-AhU"/>
                 <constraint firstAttribute="trailing" secondItem="1FP-Xo-ZXa" secondAttribute="trailing" constant="15" id="Hru-OW-ijZ"/>
+                <constraint firstItem="i3f-dw-XqW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LmA-nt-Wik"/>
                 <constraint firstAttribute="trailing" secondItem="MkP-Xi-jKY" secondAttribute="trailing" id="OMq-pn-FLx"/>
                 <constraint firstItem="cNo-yR-rVU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="S3J-o0-rkJ"/>
                 <constraint firstItem="MkP-Xi-jKY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UsQ-qQ-XgU"/>
@@ -65,6 +73,7 @@
                 <constraint firstItem="MkP-Xi-jKY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qJf-ka-w4d"/>
                 <constraint firstAttribute="trailing" secondItem="cNo-yR-rVU" secondAttribute="trailing" id="uLQ-kD-eoE"/>
                 <constraint firstItem="cNo-yR-rVU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vE9-98-kLH"/>
+                <constraint firstAttribute="bottom" secondItem="i3f-dw-XqW" secondAttribute="bottom" id="yol-i0-1J6"/>
                 <constraint firstAttribute="bottom" secondItem="cNo-yR-rVU" secondAttribute="bottom" id="zhm-W8-w0s"/>
             </constraints>
             <connections>
