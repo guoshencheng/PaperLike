@@ -31,7 +31,7 @@
     self.backgroundCollectionViewDatasource.backgroundCellConfigurationBlock = ^(NSIndexPath *indexPath, UICollectionViewCell *cell) {
         [cell addGestureRecognizer:gesture];
     };
-    self.backgroundCollectionViewDatasource.datas = @[@"", @"", @""];
+    self.backgroundCollectionViewDatasource.datas = @[@"poster_1.jpg", @"poster_2.jpg", @"poster_3.jpg"];
     self.backgroundCollectionView.dataSource = self.backgroundCollectionViewDatasource;
 }
 

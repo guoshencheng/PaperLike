@@ -16,6 +16,8 @@
     if (self.backgroundCellConfigurationBlock) {
         self.backgroundCellConfigurationBlock(indexPath, backgroundCollectionViewCell);
     }
+    NSString *imageName = [self.datas objectAtIndex:indexPath.item];
+    [backgroundCollectionViewCell updateWithImage:[UIImage imageNamed:imageName]];
     return backgroundCollectionViewCell;
 }
 

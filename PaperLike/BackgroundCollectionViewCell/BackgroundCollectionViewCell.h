@@ -13,4 +13,6 @@
 
 @interface BackgroundCollectionViewCell : UICollectionViewCell
 
+- (void)updateWithImage:(UIImage *)image;
+
 @end

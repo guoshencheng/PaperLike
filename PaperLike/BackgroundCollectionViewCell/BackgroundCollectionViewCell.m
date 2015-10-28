@@ -19,6 +19,10 @@
 
 @implementation BackgroundCollectionViewCell
 
+- (void)updateWithImage:(UIImage *)image {
+    self.backgroundImageView.image = image;
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }
